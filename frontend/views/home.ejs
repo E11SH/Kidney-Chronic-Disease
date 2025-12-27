@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Insight - Explainable AI for Kidney Health</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Landing Page -->
+    <div id="landingPage" class="landing-page">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <span class="logo-text">CKD Insight</span>
+                </div>
+                <nav class="nav">
+                    <a href="#features" class="nav-link">Features</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-grid">
+                <div>
+                    <div class="badge">
+                        <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span>Medical-Grade AI Platform</span>
+                    </div>
+
+                    <h1 class="hero-title">CKD Insight – Explainable AI for Kidney Health</h1>
+
+                    <p class="hero-description">
+                        Harness the power of transparent artificial intelligence to diagnose Chronic Kidney Disease
+                        with clinical precision. Our platform provides interpretable predictions backed by
+                        state-of-the-art machine learning models, designed for patients, physicians, and researchers.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg" onclick="showDashboard('user')">
+                            Start Diagnosis
+                        </button>
+                        <button class="btn btn-secondary btn-lg" onclick="showDashboard('researcher')">
+                            Researcher Mode
+                        </button>
+                    </div>
+
+                    <div class="stats">
+                        <div>
+                            <div class="stat-value" style="color: var(--primary-blue)">95%+</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div>
+                            <div class="stat-value" style="color: var(--secondary-teal)">6</div>
+                            <div class="stat-label">ML Models</div>
+                        </div>
+                        <div>
+                            <div class="stat-value" style="color: var(--success)">100%</div>
+                            <div class="stat-label">Explainable</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="doc.svg" alt="Medical AI">
+                    <div class="hero-badge-float">
+                        <div class="hero-badge-content">
+                            <div class="hero-badge-icon">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    style="color: var(--primary-blue)">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.875rem; font-weight: 600;">AI-Powered Analysis</div>
+                                <div style="font-size: 0.75rem; color: var(--muted-text)">Real-time predictions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Platform Features</h2>
+                    <p class="section-description">
+                        Comprehensive tools designed for clinical decision support and research excellence
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: rgba(30, 136, 229, 0.1)">
+                            <svg class="icon" fill="none" stroke="var(--primary-blue)" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Clinical Input</h3>
+                        <p class="feature-description">Support for multiple biomarkers including Creatinine, GFR, BUN,
+                            and more</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: rgba(38, 166, 154, 0.1)">
+                            <svg class="icon" fill="none" stroke="var(--secondary-teal)" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Multiple Models</h3>
+                        <p class="feature-description">6 ML algorithms from KNN to Neural Networks for robust
+                            predictions</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: rgba(67, 160, 71, 0.1)">
+                            <svg class="icon" fill="none" stroke="var(--success)" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Explainability</h3>
+                        <p class="feature-description">Feature importance visualization and interpretable AI
+                            explanations</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: rgba(30, 136, 229, 0.1)">
+                            <svg class="icon" fill="none" stroke="var(--primary-blue)" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Medical Grade</h3>
+                        <p class="feature-description">Designed for clinical use with transparency and accountability
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="logo">
+                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        style="color: var(--primary-blue)">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <span style="font-weight: 600;">CKD Insight</span>
+                </div>
+                <div style="font-size: 0.875rem; color: var(--muted-text)">
+                    © 2025 CKD Insight. Medical-grade AI platform.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard hidden">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <div class="logo">
+                        <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <span class="logo-text">CKD Insight</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm" onclick="showLanding()"
+                        style="display: flex; align-items: center; gap: 0.5rem;">
+                        <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        Home
+                    </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <div class="mode-toggle">
+                        <div class="mode-toggle-label">
+                            <svg class="icon-sm" id="userIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                            <span>User Mode</span>
+                        </div>
+
+                        <div class="switch" id="modeSwitch" onclick="toggleMode()">
+                            <div class="switch-thumb"></div>
+                        </div>
+
+                        <div class="mode-toggle-label">
+                            <svg class="icon-sm" id="researcherIcon" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                            <span>Researcher Mode</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <!-- User Mode View -->
+            <div id="userMode" class="space-y">
+                <div class="page-header">
+                    <h1 class="page-title">Patient Diagnosis</h1>
+                    <p class="page-description">Enter clinical parameters to receive AI-powered CKD risk assessment</p>
+                </div>
+
+                <div class="grid-2-1">
+                    <div class="space-y">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Clinical Parameters</div>
+                                <div class="card-description">Enter patient biomarkers or upload CSV file</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="tabs">
+                                    <div class="tabs-list">
+                                        <button class="tab-trigger active" onclick="switchTab('manual')">Manual
+                                            Input</button>
+                                        <button class="tab-trigger" onclick="switchTab('csv')">CSV Upload</button>
+                                    </div>
+                                </div>
+
+                                <div id="manualTab" class="tab-content active">
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Age</label>
+                                            <input type="number" class="form-input" id="age" placeholder="e.g., 48">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Blood Pressure (mm/Hg)</label>
+                                            <input type="number" class="form-input" id="bp" placeholder="e.g., 80">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Specific Gravity</label>
+                                            <input type="number" step="0.001" class="form-input" id="sg"
+                                                placeholder="e.g., 1.020">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Albumin</label>
+                                            <input type="number" class="form-input" id="al" placeholder="e.g., 0-5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Sugar</label>
+                                            <input type="number" class="form-input" id="su" placeholder="e.g., 0-5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Red Blood Cells</label>
+                                            <select class="form-input" id="rbc">
+                                                <option value="">Select...</option>
+                                                <option value="normal">Normal</option>
+                                                <option value="abnormal">Abnormal</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Pus Cell</label>
+                                            <select class="form-input" id="pc">
+                                                <option value="">Select...</option>
+                                                <option value="normal">Normal</option>
+                                                <option value="abnormal">Abnormal</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Pus Cell Clumps</label>
+                                            <select class="form-input" id="pcc">
+                                                <option value="">Select...</option>
+                                                <option value="present">Present</option>
+                                                <option value="notpresent">Not Present</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Bacteria</label>
+                                            <select class="form-input" id="ba">
+                                                <option value="">Select...</option>
+                                                <option value="present">Present</option>
+                                                <option value="notpresent">Not Present</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Blood Glucose Random (mgs/dl)</label>
+                                            <input type="number" class="form-input" id="bgr" placeholder="e.g., 121">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Blood Urea (mgs/dl)</label>
+                                            <input type="number" class="form-input" id="bu" placeholder="e.g., 36">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Serum Creatinine (mgs/dl)</label>
+                                            <input type="number" step="0.1" class="form-input" id="sc"
+                                                placeholder="e.g., 1.2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Sodium (mEq/L)</label>
+                                            <input type="number" class="form-input" id="sod" placeholder="e.g., 137">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Potassium (mEq/L)</label>
+                                            <input type="number" step="0.1" class="form-input" id="pot"
+                                                placeholder="e.g., 4.6">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Hemoglobin (gms)</label>
+                                            <input type="number" step="0.1" class="form-input" id="hemo"
+                                                placeholder="e.g., 15.4">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Packed Cell Volume</label>
+                                            <input type="number" class="form-input" id="pcv" placeholder="e.g., 44">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">White Blood Cell Count (cells/cumm)</label>
+                                            <input type="number" class="form-input" id="wbcc" placeholder="e.g., 7800">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Red Blood Cell Count (millions/cmm)</label>
+                                            <input type="number" step="0.1" class="form-input" id="rbcc"
+                                                placeholder="e.g., 5.2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Hypertension</label>
+                                            <select class="form-input" id="htn">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Diabetes Mellitus</label>
+                                            <select class="form-input" id="dm">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Coronary Artery Disease</label>
+                                            <select class="form-input" id="cad">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Appetite</label>
+                                            <select class="form-input" id="appet">
+                                                <option value="">Select...</option>
+                                                <option value="good">Good</option>
+                                                <option value="poor">Poor</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Pedal Edema</label>
+                                            <select class="form-input" id="pe">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Anemia</label>
+                                            <select class="form-input" id="ane">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+                                        onclick="generateDiagnosis()">
+                                        <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem; display: inline;"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                        Generate Diagnosis
+                                    </button>
+                                </div>
+
+                                <div id="csvTab" class="tab-content">
+                                    <div class="upload-area">
+                                        <svg style="width: 3rem; height: 3rem; color: var(--muted-text); margin: 0 auto 1rem;"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Upload CSV File</h3>
+                                        <p style="font-size: 0.875rem; color: var(--muted-text); margin-bottom: 1rem;">
+                                            Drop your CSV file here or click to browse
+                                        </p>
+                                        <input type="file" id="csvFileInput" accept=".csv" style="display: none;"
+                                            onchange="handleCSVUpload(event)">
+                                        <button class="btn btn-outline"
+                                            style="border-color: var(--primary-blue); color: var(--primary-blue);"
+                                            onclick="document.getElementById('csvFileInput').click()">
+                                            Select File
+                                        </button>
+                                        <p style="font-size: 0.75rem; color: var(--muted-text); margin-top: 1rem;">
+                                            Expected format: Creatinine, GFR, BUN, Hemoglobin, Albumin, Age
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="explainabilitySection" class="card hidden">
+                            <div class="card-header">
+                                <div class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg class="icon" fill="none" stroke="var(--primary-blue)" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                    Explainable AI - Feature Importance
+                                </div>
+                                <div class="card-description">Understanding which biomarkers influenced the prediction
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <canvas id="featureImportanceChart" width="600" height="300"></canvas>
+
+                                <div class="info-box" style="margin-top: 1.5rem;">
+                                    <svg class="icon" style="color: var(--primary-blue); flex-shrink: 0;" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <div>
+                                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">AI Explanation</h4>
+                                        <p style="font-size: 0.875rem; line-height: 1.6;">
+                                            The model identified <strong>GFR (92%)</strong> and <strong>Creatinine
+                                                (85%)</strong> as
+                                            the most influential factors in this prediction. The patient's GFR value is
+                                            below the normal
+                                            range (90-120 mL/min/1.73m²), and elevated creatinine levels indicate
+                                            reduced kidney function.
+                                            Age and albumin levels also contributed moderately to the risk assessment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y">
+                        <div id="resultCard" class="card">
+                            <div class="card-content"
+                                style="text-align: center; padding: 3rem 1.5rem; color: var(--muted-text);">
+                                <svg style="width: 3rem; height: 3rem; margin: 0 auto 1rem; opacity: 0.3;" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                                <p>Enter patient data to generate diagnosis</p>
+                            </div>
+                        </div>
+
+                        <div id="treatmentCard" class="card hidden">
+                            <div class="card-header">
+                                <div class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg class="icon" fill="none" stroke="var(--secondary-teal)" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                    </svg>
+                                    Recommended Actions
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <ul class="recommendation-list">
+                                    <li class="recommendation-item">
+                                        <div class="recommendation-bullet"></div>
+                                        <p>Consult nephrologist for comprehensive evaluation</p>
+                                    </li>
+                                    <li class="recommendation-item">
+                                        <div class="recommendation-bullet"></div>
+                                        <p>Monitor kidney function every 3-6 months</p>
+                                    </li>
+                                    <li class="recommendation-item">
+                                        <div class="recommendation-bullet"></div>
+                                        <p>Maintain blood pressure below 130/80 mmHg</p>
+                                    </li>
+                                    <li class="recommendation-item">
+                                        <div class="recommendation-bullet"></div>
+                                        <p>Reduce protein intake to 0.8g/kg body weight</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="treatmentPlanCard" class="card hidden">
+                            <div class="card-header">
+                                <div class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg class="icon" fill="none" stroke="var(--primary-blue)" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    AI-Generated Treatment Plan
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <textarea id="treatmentPlan" class="form-input" rows="8" readonly
+                                    style="width: 100%; resize: vertical; font-family: inherit; line-height: 1.6;"
+                                    placeholder="Treatment plan will be generated by AI..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Researcher Mode View -->
+            <div id="researcherMode" class="space-y hidden">
+                <div class="page-header">
+                    <h1 class="page-title">Research Laboratory</h1>
+                    <p class="page-description">Advanced model experimentation, hyperparameter tuning, and performance
+                        analysis</p>
+                </div>
+
+                <div class="grid-1-2">
+                    <div class="space-y">
+                        <!-- Data Input Section -->
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Research Data Input</div>
+                                <div class="card-description">Enter parameters manually or upload CSV file</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="tabs">
+                                    <div class="tabs-list">
+                                        <button class="tab-trigger active" onclick="switchResearchTab('manual')">Manual
+                                            Input</button>
+                                        <button class="tab-trigger" onclick="switchResearchTab('csv')">CSV
+                                            Upload</button>
+                                    </div>
+                                </div>
+
+                                <div id="researchManualTab" class="tab-content active">
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Age</label>
+                                            <input type="number" class="form-input" id="research_age"
+                                                placeholder="e.g., 48">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Blood Pressure (mm/Hg)</label>
+                                            <input type="number" class="form-input" id="research_bp"
+                                                placeholder="e.g., 80">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Specific Gravity</label>
+                                            <input type="number" step="0.001" class="form-input" id="research_sg"
+                                                placeholder="e.g., 1.020">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Albumin</label>
+                                            <input type="number" class="form-input" id="research_al"
+                                                placeholder="e.g., 0-5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Sugar</label>
+                                            <input type="number" class="form-input" id="research_su"
+                                                placeholder="e.g., 0-5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Red Blood Cells</label>
+                                            <select class="form-input" id="research_rbc">
+                                                <option value="">Select...</option>
+                                                <option value="normal">Normal</option>
+                                                <option value="abnormal">Abnormal</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Pus Cell</label>
+                                            <select class="form-input" id="research_pc">
+                                                <option value="">Select...</option>
+                                                <option value="normal">Normal</option>
+                                                <option value="abnormal">Abnormal</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Pus Cell Clumps</label>
+                                            <select class="form-input" id="research_pcc">
+                                                <option value="">Select...</option>
+                                                <option value="present">Present</option>
+                                                <option value="notpresent">Not Present</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Bacteria</label>
+                                            <select class="form-input" id="research_ba">
+                                                <option value="">Select...</option>
+                                                <option value="present">Present</option>
+                                                <option value="notpresent">Not Present</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Blood Glucose Random (mgs/dl)</label>
+                                            <input type="number" class="form-input" id="research_bgr"
+                                                placeholder="e.g., 121">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Blood Urea (mgs/dl)</label>
+                                            <input type="number" class="form-input" id="research_bu"
+                                                placeholder="e.g., 36">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Serum Creatinine (mgs/dl)</label>
+                                            <input type="number" step="0.1" class="form-input" id="research_sc"
+                                                placeholder="e.g., 1.2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Sodium (mEq/L)</label>
+                                            <input type="number" class="form-input" id="research_sod"
+                                                placeholder="e.g., 137">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Potassium (mEq/L)</label>
+                                            <input type="number" step="0.1" class="form-input" id="research_pot"
+                                                placeholder="e.g., 4.6">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Hemoglobin (gms)</label>
+                                            <input type="number" step="0.1" class="form-input" id="research_hemo"
+                                                placeholder="e.g., 15.4">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Packed Cell Volume</label>
+                                            <input type="number" class="form-input" id="research_pcv"
+                                                placeholder="e.g., 44">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">White Blood Cell Count (cells/cumm)</label>
+                                            <input type="number" class="form-input" id="research_wbcc"
+                                                placeholder="e.g., 7800">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Red Blood Cell Count (millions/cmm)</label>
+                                            <input type="number" step="0.1" class="form-input" id="research_rbcc"
+                                                placeholder="e.g., 5.2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Hypertension</label>
+                                            <select class="form-input" id="research_htn">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Diabetes Mellitus</label>
+                                            <select class="form-input" id="research_dm">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Coronary Artery Disease</label>
+                                            <select class="form-input" id="research_cad">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Appetite</label>
+                                            <select class="form-input" id="research_appet">
+                                                <option value="">Select...</option>
+                                                <option value="good">Good</option>
+                                                <option value="poor">Poor</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Pedal Edema</label>
+                                            <select class="form-input" id="research_pe">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Anemia</label>
+                                            <select class="form-input" id="research_ane">
+                                                <option value="">Select...</option>
+                                                <option value="yes">Yes</option>
+                                                <option value="no">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+                                        onclick="generateResearchDiagnosis()">
+                                        <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem; display: inline;"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                        Generate Diagnosis
+                                    </button>
+                                </div>
+
+                                <div id="researchCSVTab" class="tab-content">
+                                    <div class="upload-area">
+                                        <svg style="width: 3rem; height: 3rem; color: var(--muted-text); margin: 0 auto 1rem;"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Upload CSV File</h3>
+                                        <p style="font-size: 0.875rem; color: var(--muted-text); margin-bottom: 1rem;">
+                                            Drop your CSV file here or click to browse
+                                        </p>
+                                        <input type="file" id="researchCSVInput" accept=".csv" style="display: none;"
+                                            onchange="handleResearchCSVUpload(event)">
+                                        <button class="btn btn-outline"
+                                            style="border-color: var(--secondary-teal); color: var(--secondary-teal);"
+                                            onclick="document.getElementById('researchCSVInput').click()">
+                                            Select File
+                                        </button>
+                                        <p style="font-size: 0.75rem; color: var(--muted-text); margin-top: 1rem;">
+                                            Expected format: age, bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod,
+                                            pot, hemo, pcv, wbcc, rbcc, htn, dm, cad, appet, pe, ane
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Model Selection</div>
+                                <div class="card-description">Choose ML algorithm</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="model-selector" id="modelSelector">
+                                    <!-- Model options will be generated by JS -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg class="icon" fill="none" stroke="var(--secondary-teal)" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    Hyperparameters
+                                </div>
+                                <div class="card-description">Fine-tune model parameters</div>
+                            </div>
+                            <div class="card-content" id="hyperparameters">
+                                <!-- Dynamic hyperparameters will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Model Performance Comparison</div>
+                                <div class="card-description">Accuracy across all models</div>
+                            </div>
+                            <div class="card-content">
+                                <canvas id="performanceChart" width="600" height="300"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Training History</div>
+                                <div class="card-description">Loss and accuracy over epochs</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="tabs">
+                                    <div class="tabs-list">
+                                        <button class="tab-trigger active"
+                                            onclick="switchTrainingTab('accuracy')">Accuracy</button>
+                                        <button class="tab-trigger" onclick="switchTrainingTab('loss')">Loss</button>
+                                    </div>
+                                </div>
+                                <div id="accuracyTab" class="tab-content active" style="margin-top: 1rem;">
+                                    <canvas id="accuracyChart" width="600" height="250"></canvas>
+                                </div>
+                                <div id="lossTab" class="tab-content" style="margin-top: 1rem;">
+                                    <canvas id="lossChart" width="600" height="250"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Confusion Matrix</div>
+                                    <div class="card-description">Classification breakdown</div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="confusion-grid">
+                                        <div class="confusion-cell" style="background: rgba(67, 160, 71, 0.1);">
+                                            <div class="confusion-value" style="color: var(--success);">842</div>
+                                            <div class="confusion-label">No CKD → No CKD</div>
+                                        </div>
+                                        <div class="confusion-cell" style="background: rgba(251, 140, 0, 0.1);">
+                                            <div class="confusion-value" style="color: var(--warning);">18</div>
+                                            <div class="confusion-label">No CKD → CKD</div>
+                                        </div>
+                                        <div class="confusion-cell" style="background: rgba(251, 140, 0, 0.1);">
+                                            <div class="confusion-value" style="color: var(--warning);">22</div>
+                                            <div class="confusion-label">CKD → No CKD</div>
+                                        </div>
+                                        <div class="confusion-cell" style="background: rgba(67, 160, 71, 0.1);">
+                                            <div class="confusion-value" style="color: var(--success);">918</div>
+                                            <div class="confusion-label">CKD → CKD</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">Performance Metrics</div>
+                                    <div class="card-description">Current model statistics</div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="metrics-grid">
+                                        <div class="metric-row">
+                                            <span class="metric-label">ROC-AUC Score</span>
+                                            <span class="metric-value" style="color: var(--primary-blue);">0.964</span>
+                                        </div>
+                                        <div class="metric-row">
+                                            <span class="metric-label">Specificity</span>
+                                            <span class="metric-value"
+                                                style="color: var(--secondary-teal);">97.9%</span>
+                                        </div>
+                                        <div class="metric-row">
+                                            <span class="metric-label">Sensitivity</span>
+                                            <span class="metric-value" style="color: var(--success);">96.1%</span>
+                                        </div>
+                                        <div class="metric-row">
+                                            <span class="metric-label">Training Time</span>
+                                            <span class="metric-value">2.34s</span>
+                                        </div>
+                                        <div class="metric-row">
+                                            <span class="metric-label">Inference Time</span>
+                                            <span class="metric-value">0.012s</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
